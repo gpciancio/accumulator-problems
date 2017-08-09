@@ -1,135 +1,144 @@
-/*
-----------------------------------------
-SAMPLE
-----------------------------------------
-
-Challenge: Write function named test that returns the string "This Works!". 
-Solution: This one has already been complete for you. 
-
-*/
-
+// /*
+// ----------------------------------------
+// SAMPLE
+// ----------------------------------------
+//
+// Challenge: Write function named test that returns the string "This Works!".
+// Solution: This one has already been complete for you.
+//
+// */
+//
 function test() {
  var string ="This Works!";
  return string;
+};
+//
+//
+//
+// /*
+// ----------------------------------------
+// CHALLENGE
+// ----------------------------------------
+//
+// Write function named sum that will take an array of numbers and return the sum of them
+//
+// Example: if you pass it [1,2,3] then it should return 6 (which is 1 + 2 + 3)
+// */
+//
+
+function sum (array) {
+    var results = 0;
+    for(var i = 0; i < array.length; i++){
+        results += array[i];
+    }
+    return(results);
+}
+sum();
+//
+//
+//
+//
+// /*
+// ----------------------------------------
+// CHALLENGE
+// ----------------------------------------
+//
+// Write function named doubleNumbers that will take an array of numbers and return an array with those numbers doubled
+//
+// Example: if you pass it [1,2,3] then it should return [2,4,6]
+// */
+//
+function doubleNumbers(array) {
+var newArr = [];
+for (var i = 0; i < array.length; i++) {
+  newArr.push(array[i] * 2);
 }
 
-
-
-/*
-----------------------------------------
-CHALLENGE
-----------------------------------------
-
-Write function named sum that will take an array of numbers and return the sum of them
-
-Example: if you pass it [1,2,3] then it should return 6 (which is 1 + 2 + 3)
-*/
-
-
-
-
-
-
-
-
-
-/*
-----------------------------------------
-CHALLENGE
-----------------------------------------
-
-Write function named doubleNumbers that will take an array of numbers and return an array with those numbers doubled
-
-Example: if you pass it [1,2,3] then it should return [2,4,6]
-*/
-
-
-
-
-
-
-
-
-
-/*
-----------------------------------------
-CHALLENGE
-----------------------------------------
-
-Write function named multiplyNumbers that will take an array of numbers and
-return an array with those numbers multiplied by another value
-
-Examples:
-
-- if you call multiplyNumbers([1,2,3], 0) you'd get [0,0,0]
-- if you call multiplyNumbers([1,2,3], 5) you'd get [5,10,15]
-*/
-
-
-
-
-
-
-
-
-
-/*
-----------------------------------------
-CHALLENGE
-----------------------------------------
-
-Write function named doubleLetters that will take a string and double every letter in the string
-
-Example: if you pass it "abc" then it should return "aabbcc"
-*/
-
-
-
-
-
-
-
-
-
-
-/*
-----------------------------------------
-CHALLENGE
-----------------------------------------
-
-Write function named interleave that will take two arrays and interleaves them
-
-Example: if you pass it ["a", "b", "c"] and ["d", "e", "f"] then it should return ["a", "d", "b", "e", "c", "f"]
-
-NOTE: you can assume each input will be the same length
-*/
-
-
-
-
-
-
-
-
-
-
-
-/*
-----------------------------------------
-CHALLENGE
-----------------------------------------
-
-Write function named createRange that will take a number and a default value and return an array of that many values
-
-Example: if you pass it 4 and "Hello" then it should return ["Hello", "Hello", "Hello", "Hello"]
-*/
-
-
-
-
-
-
-
+  return newArr;
+}
+//
+// /*
+// ----------------------------------------
+// CHALLENGE
+// ----------------------------------------
+//
+// Write function named multiplyNumbers that will take an array of numbers and
+// return an array with those numbers multiplied by another value
+//
+// Examples:
+//
+// - if you call multiplyNumbers([1,2,3], 0) you'd get [0,0,0]
+// - if you call multiplyNumbers([1,2,3], 5) you'd get [5,10,15]
+// */
+//
+function multiplyNumbers(arrayOfNumbers,num) {
+  var arrNum = [];
+  for (var i = 0; i < arrayOfNumbers.length; i++) {
+    arrNum.push(arrayOfNumbers[i] * num);
+  }
+  return arrNum;
+}
+//
+// /*
+// ----------------------------------------
+// CHALLENGE
+// ----------------------------------------
+//
+// Write function named doubleLetters that will take a string and double every letter in the string
+//
+// Example: if you pass it "abc" then it should return "aabbcc"
+// */
+//
+function doubleLetters(string) {
+  var newStr = "";
+  for (var i = 0; i < string.length; i++) {
+    newStr += string[i] + string[i]
+
+  }
+  return newStr;
+}
+//
+//
+// /*
+// ----------------------------------------
+// CHALLENGE
+// ----------------------------------------
+//
+// Write function named interleave that will take two arrays and interleaves them
+//
+// Example: if you pass it ["a", "b", "c"] and ["d", "e", "f"] then it should return ["a", "d", "b", "e", "c", "f"]
+//
+// NOTE: you can assume each input will be the same length
+// */
+//
+//
+function interleave(array, array1) {
+var arrInt = [];
+  for (var i = 0; i < array.length; i++) {
+    arrInt.push(array[i]) + arrInt.push(array1[i]);
+  }
+
+  return arrInt;
+}
+//
+//
+// /*
+// ----------------------------------------
+// CHALLENGE
+// ----------------------------------------
+//
+// Write function named createRange that will take a number and a default value and return an array of that many values
+//
+// Example: if you pass it 4 and "Hello" then it should return ["Hello", "Hello", "Hello", "Hello"]
+// */
+// function createRange (number, "") {
+//   var newArr = []
+// for (var i = 0; i <= number; i++) {
+//   newArr.push(createRange[1]);
+//   console.log(newArr);
+// }
+// return newArr;
+// };
 
 /*
 ----------------------------------------
@@ -143,11 +152,21 @@ Example:
 If you pass it ["quick", "brown", "fox"] then it should return { "quick": 0, "brown": 1, "fox": 2 }
 */
 
+function flipArray(array) {
+ var object = {}
+ for (var i = 0; i < array.length; i++) {
+   object.push(array[i])
+   console.log(object);
+ }
 
 
 
+  return new object
+
+};
 
 
+flipArray();
 
 
 /*
@@ -162,11 +181,19 @@ Example:
 If you pass it [[2014, "Horse"], [2015, "Sheep"]] then it should return { 2014: "Horse", 2015: "Sheep" }
 
 */
-
-
-
-
-
+//
+// function arraysToObject(array) {
+// var object = {};
+//   for (var i = 0; i < array.length; i++) {
+//     var key = {};
+//     console.log("key", key)
+//
+//   }
+//
+//
+// }
+//
+// return object;
 
 
 
@@ -794,4 +821,4 @@ If you pass {1999: 4036, 2000: 7654} and 4036, it should return true
 
 
 
-// 
+//
